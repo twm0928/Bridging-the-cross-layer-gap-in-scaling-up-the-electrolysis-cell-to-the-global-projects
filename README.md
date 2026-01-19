@@ -1,5 +1,4 @@
 # Bridging-the-cross-layer-gap-in-scaling-up-the-electrolysis-cell-to-the-global-projects
-Overview
 This repository provides a multi-layer modeling and optimization pipeline for electrolyzer systems, including stack, module, plant, and project levels. Each layer contains dedicated calculation modules and optimization routines that can be run independently or as a workflow.
 
 1. Stack Level
