@@ -1,5 +1,22 @@
 # Bridging-the-cross-layer-gap-in-scaling-up-the-electrolysis-cell-to-the-global-projects
+Overview
 This repository provides a multi-layer modeling and optimization pipeline for electrolyzer systems, including stack, module, plant, and project levels. Each layer contains dedicated calculation modules and optimization routines that can be run independently or as a workflow.
+
+System Requirements
+Operating Systems:
+Tested on: Windows 10
+Should work on: Windows 10/11
+Software Dependencies:
+MATLAB R2021b (required)
+MATLAB Toolboxes:
+Gurobi Optimization Toolbox
+Statistics and Machine Learning Toolbox
+No additional external libraries are required.
+Hardware Requirements:
+No non‑standard hardware is needed. All simulations were performed on a workstation with an 11th Gen Intel Core i7‑1165G7 processor and 16 GB RAM. For very large plant simulations, more memory may be beneficial.
+
+Installation and Usage Guide
+The pipeline can be executed layer by layer. Below are instructions for running each level using the provided sample data.
 
 1. Stack Level
 cal_stack.m: Main function for stack-level simulation. Allows specification of various stack design parameters.
@@ -20,3 +37,5 @@ cal_smart.m: Implements the dispatch (scheduling) strategy; inputs site total po
 
 4. Project Level
 cal_project.m: Main computation function for real-project evaluation; logic is analogous to cal_plant.m, taking practical economic/operational boundaries as input, and outputting project-level hydrogen production results.
+
+Expected outputs: Each function displays key results in the MATLAB command window (e.g., hydrogen production, efficiency). Some functions may generate figures (e.g., current distribution, dispatch schedule). All outputs are also available in the workspace for further analysis.
